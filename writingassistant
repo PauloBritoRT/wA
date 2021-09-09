@@ -1,0 +1,1053 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+C#, VB, Perl, Swift, Prolog, Javascript, Pascal, HTML, CSS, JS
+Code, Compile, Run and Debug online from anywhere in world.
+##Dev note: THIS BROWSER COMPILER WAS A COMPLETE LIFE SAVER##
+*******************************************************************************/
+#include <stdio.h>
+#include <cstdlib>
+#include <cmath>
+#include <conio.h>
+#include <fstream>
+#include <iostream>
+#include <iomanip>
+#include <string>
+
+using namespace std;
+void ClearScreen()
+    {
+    int n = 0;
+    for (n = 0; n < 10; n++)
+      cout<<"\n\n\n\n\n\n\n\n\n\n";
+    }
+    
+
+ 
+class character {
+    public:
+    string name;
+    string age;
+    string role;
+    string physic;
+    string ennType;
+    string fear;
+    string motivation;
+    string kryptonite;
+    string misbelief;
+    string lesson;
+    string bestThing;
+    string worstThing;
+    string lookDown;
+    string heartWarm;
+    string feelLove;
+    string topThree;
+    string favWork;
+    string favObj;
+    string outfit;
+    string nickNames;
+    string manip;
+    string routine;
+    string badDayCure;
+    string dissatisfied;
+    string belief;
+    string defStep;
+    string howFear;
+    string howGoal;
+    string backTwist;
+    string struggle;
+    string conclusion;
+    
+    string agenda;
+};  
+
+class characterArc {
+    public:
+    string opening;
+    string incitingIncident;
+    string middle;
+    string darkMoment;
+    string ahaMoment;
+    string ending;
+    string conclusion;
+};
+
+class outlineStructure {
+    public:
+    string hook;
+    string iIncident;
+    string buildUp;
+    string firstPlotPoint;
+    string firstPinchPoint;
+    string preMidPoint;
+    string midPoint;
+    string postMidPoint;
+    string secondPinchPoint;
+    string supposedVictory;
+    string disaster;
+    string darkestMoment;
+    string realizationMoment;
+    string climaxConfront;
+    string victory;
+    string resolution;
+};
+
+    
+int main()
+{
+    int charNumber = 0;
+    string dat;
+    string session = "0";
+    string project = "";
+    string quest = "0"; 
+    string draftholder = "0";
+    string line;
+    
+    debug:
+    cout<<endl<<endl<<"''Writing means sharing. "<<endl;
+    cout<<"It's part of the human condition to want to share things - thoughts, ideas, opinions.''"<<endl;
+    cout<<"                                                                  -- Paulo Coelho"<<endl<<endl;
+    cout<<"Welcome to your Prog06 Writing Assistant! Please submit session info."<<endl;
+    cout<<"Insert today's date in Day-Month-Year (Please avoid using '/')"<<endl;
+    cin>>dat;
+    cout<<"Insert the time this session started in Hour:Minute"<<endl;
+    cin>>session;
+    cout<<"Insert the name of which story project you'll be working on during this session"<<endl;
+    cin.ignore();
+    getline(cin , project);
+    
+    ofstream MainCharFile (project+": Characters-"+dat+"-"+session+".txt");
+    MainCharFile.close();
+    
+    ofstream MainArcFile (project+": Character Arcs-"+dat+"-"+session+".txt");
+    MainArcFile.close();
+    
+    ofstream EnneagramTyp ("Enneagram Types.txt");
+    EnneagramTyp.close();
+    
+    ofstream OutlineFile (project+": Outline-"+dat+"-"+session+".txt");
+    OutlineFile.close();
+    
+    ofstream DraftFile (project+": Draft-"+dat+"-"+session+".txt");
+    DraftFile.close();
+    
+    ClearScreen();
+    
+    firstpoint:
+    
+    
+    cout<<"------------------["<<dat<<"]-----[Session: "<<session<<"]----------"<<endl;
+    cout<<"        -What do you feel like doing for now?-    "<<endl<<endl;
+    cout<<"         1. Character Work     "<<endl;
+    cout<<"         2. Story Outline            "<<endl;
+    cout<<"         3. Draft              "<<endl;
+    cout<<"         4. Read Session Files              "<<endl<<endl;
+    cout<<"         5. End Program            "<<endl<<endl;
+    cout<<"         0. Return to start of program             "<<endl<<endl;
+    cout<<"--------------------~~["<<project<<"]~~----------------------"<<endl;
+    
+    cin>>quest;
+    
+    ClearScreen();
+      if (quest == "1")
+      {
+          
+          cin.ignore();
+          cout<<"------------------["<<dat<<"]-----[Session: "<<session<<"]----------"<<endl;
+    cout<<"       -What kind of Character Work do you wish to complete?-    "<<endl<<endl;
+    cout<<"         1. Character Profile     "<<endl;
+    cout<<"         2. Character Development Arc       "<<endl;
+    cout<<"         3. View Enneagram Types            "<<endl<<endl;
+    cout<<"         4. Return to Menu           "<<endl<<endl;
+    cout<<"--------------------~~["<<project<<"]~~----------------------"<<endl;
+          cin>>quest;
+          if (quest == "1")
+          {
+              ClearScreen();
+              character mainChar;
+              
+              
+              
+              
+              cout<<"What is the character’s name: "<<endl;
+              cin.ignore();
+              getline(cin, mainChar.name);
+              
+              
+              cout<<"What is their role in the story?"<<endl;
+              
+              getline(cin, mainChar.role);
+              
+              
+              
+              cout<<"What is their physical description?"<<endl;
+              
+              getline(cin, mainChar.physic);
+              
+              
+              cout<<"Age:"<<endl;
+              
+              getline(cin, mainChar.age);
+              
+              
+              cout<<"Enneagram Personality Type:"<<endl;
+             
+              getline(cin, mainChar.ennType);
+              
+              
+              cout<<"What is his/her greatest fear?"<<endl;
+              
+              getline(cin, mainChar.fear);
+              
+              
+              cout<<"Inner motivation:"<<endl;
+              
+              getline(cin, mainChar.motivation);
+              
+              
+              cout<<"Kryptonite:"<<endl;
+             
+              getline(cin, mainChar.kryptonite);
+              
+              
+              cout<<"What is his/her misbelief about the world?"<<endl;
+              
+              getline(cin, mainChar.misbelief);
+              
+              
+              cout<<"Lesson he/she needs to learn:"<<endl;
+              
+              getline(cin, mainChar.lesson);
+              
+              
+              cout<<"What is the best thing in his/her life?"<<endl;
+              
+              getline(cin, mainChar.bestThing);
+              
+              
+              cout<<"What is the worst thing in his/her life?"<<endl;
+              
+              getline(cin, mainChar.worstThing);
+              
+              
+              cout<<"What does he/she most often look down on people for?"<<endl;cin.ignore();
+              
+              getline(cin, mainChar.lookDown);
+              
+              
+              cout<<"What makes his/her heart feel alive?"<<endl;
+              
+              getline(cin, mainChar.heartWarm);
+              
+              
+              cout<<"What makes him/her feel loved, and who was the last person to make them feel that way?"<<endl;
+              
+              getline(cin, mainChar.feelLove);
+              
+              
+              cout<<"Top three things he/she values most in life?"<<endl;
+              
+              getline(cin, mainChar.topThree);
+              
+              
+              cout<<"What’s his/her favorite work, book, movie, or band?"<<endl;
+              
+              getline(cin, mainChar.favWork);
+              
+              
+              cout<<"Is there an object he/she can’t bear to part with and why?"<<endl;
+              
+              getline(cin, mainChar.favObj);
+              
+              
+              cout<<"Describe a typical outfit for him/her from top to bottom."<<endl;
+              
+              getline(cin, mainChar.outfit);
+              
+              
+              cout<<"What names or nicknames has he/she been called throughout their life?"<<endl;
+              
+              getline(cin, mainChar.nickNames);
+              
+              
+              cout<<"What is his/her method of manipulation?"<<endl;
+              
+              getline(cin, mainChar.manip);
+              
+              
+              cout<<"Describe his/her daily routine."<<endl;
+              
+              getline(cin, mainChar.routine);
+              
+              
+              cout<<"Their go-to cure for a bad day?"<<endl;
+              
+              getline(cin, mainChar.badDayCure);
+              
+              
+              cout<<"How is your character dissatisfied with their life?"<<endl;
+              
+              getline(cin, mainChar.dissatisfied);
+              
+              
+              cout<<"What does your character believe will bring them true happiness or contentment?"<<endl;
+              
+              getline(cin, mainChar.belief);
+              
+              
+              cout<<"What definitive step could they take to turn their dream into a reality?"<<endl;
+              
+              getline(cin, mainChar.defStep);
+              
+              
+              cout<<"How has their fear kept them from taking this action already?"<<endl;
+              
+              getline(cin, mainChar.howFear);
+              
+              
+              cout<<"How does your protagonist feel they can accomplish their goal while still steering clear of the thing they are afraid of?"<<endl<<endl;
+              
+              getline(cin, mainChar.howGoal);
+              
+              
+              cout<<"THE BACKSTORY SCENE THAT CHANGED EVERYTHING"<<endl;
+              cout<<"What does your character go into the scene believing and how are they surprised by the outcome?"<<endl;
+              
+              getline(cin, mainChar.backTwist);
+              
+              
+              cout<<"How does your character struggle to hold onto their old beliefs?"<<endl;
+              
+              getline(cin, mainChar.struggle);
+              
+              
+              cout<<"What is their conclusion/new belief?"<<endl;
+              
+              getline(cin, mainChar.conclusion);
+              
+              charNumber++;
+              
+              MainCharFile.open(project+": Characters-"+dat+"-"+session+".txt", ios_base::app);
+              
+              MainCharFile<<"           -Character #"<<charNumber<<"-  "<<endl<<endl;
+              
+              MainCharFile<<"What is the character’s name: "<<mainChar.name<<endl;
+              MainCharFile<<"What is their role in the story? "<<mainChar.role<<endl;
+              MainCharFile<<"What is their physical description? "<<mainChar.physic<<endl;
+              MainCharFile<<"Age: "<<mainChar.age<<endl;
+              MainCharFile<<"Enneagram Personality Type: "<<mainChar.ennType<<endl;
+              MainCharFile<<"What is his/her greatest fear? "<<mainChar.fear<<endl;
+              MainCharFile<<"Inner motivation: "<<mainChar.motivation<<endl;
+              MainCharFile<<"Kryptonite: "<<mainChar.kryptonite<<endl;
+              MainCharFile<<"What is his/her misbelief about the world? "<<mainChar.misbelief<<endl;
+              MainCharFile<<"Lesson he/she needs to learn: "<<mainChar.lesson<<endl;
+              MainCharFile<<"What is the best thing in his/her life? "<<mainChar.bestThing<<endl;
+              MainCharFile<<"What is the worst thing in his/her life? "<<mainChar.worstThing<<endl;
+              MainCharFile<<"What does he/she most often look down on people for? "<<mainChar.lookDown<<endl;
+              MainCharFile<<"What makes his/her heart feel alive? "<<mainChar.heartWarm<<endl;
+              MainCharFile<<"What makes him/her feel loved, and who was the last person to make them feel that way? "<<mainChar.feelLove<<endl;
+              MainCharFile<<"Top three things he/she values most in life? "<<mainChar.topThree<<endl;
+              MainCharFile<<"What’s his/her favorite work, book, movie, or band? "<<mainChar.favWork<<endl;
+              MainCharFile<<"Is there an object he/she can’t bear to part with and why? "<<mainChar.favObj<<endl;
+              MainCharFile<<"Describe a typical outfit for him/her from top to bottom: "<<mainChar.outfit<<endl;
+              MainCharFile<<"What names or nicknames has he/she been called throughout their life? "<<mainChar.nickNames<<endl;
+              MainCharFile<<"What is his/her method of manipulation? "<<mainChar.manip<<endl;
+              MainCharFile<<"Describe his/her daily routine. "<<mainChar.routine<<endl;
+              MainCharFile<<"Their go-to cure for a bad day? "<<mainChar.badDayCure<<endl;
+              MainCharFile<<"How is your character dissatisfied with their life? "<<mainChar.dissatisfied<<endl;
+              MainCharFile<<"What does your character believe will bring them true happiness or contentment? "<<mainChar.belief<<endl;
+              MainCharFile<<"What definitive step could they take to turn their dream into a reality? "<<mainChar.defStep<<endl;
+              MainCharFile<<"How has their fear kept them from taking this action already? "<<mainChar.howFear<<endl;
+              MainCharFile<<"How does your protagonist feel they can accomplish their goal while still steering clear of the thing they are afraid of? "<<mainChar.howGoal<<endl;
+              MainCharFile<<"THE BACKSTORY SCENE THAT CHANGED EVERYTHING"<<endl;
+              MainCharFile<<"What does your character go into the scene believing and how are they surprised by the outcome? "<<mainChar.backTwist<<endl;
+              MainCharFile<<"How does your character struggle to hold onto their old beliefs? "<<mainChar.struggle<<endl;
+              MainCharFile<<"What is their conclusion/new belief? "<<mainChar.conclusion<<endl<<endl;
+
+              MainCharFile.close();
+              ClearScreen();
+              cout<<"Character File successfully created! Create more characters or do something else!"<<endl;
+              goto firstpoint;
+              
+          }
+          else if ( quest == "2")
+          {
+              ClearScreen();
+              characterArc mainArc;
+              character arcName;
+              
+              cout<<"Whose Character Arc are you going to be working on?"<<endl;
+              cin.ignore();
+              getline(cin, arcName.name);
+              
+              cout<<"THE OPENING"<<endl;
+              cout<<"When a story first opens, nothing hooks the reader except for one thing: your protagonist's inner conflict. In a nutshell, that means: desire VS fear. How is the protagonist's fear standing in the way of getting what they think will make them truly happy?"<<endl;
+              
+              getline(cin, mainArc.opening);
+              
+              cout<<"THE INCITING INCIDENT"<<endl;
+              cout<<"Why does this inciting incident matter to your protagonist? How does it push them outside their comfort zone? How are they going to respond to it, based on the fear that has raised them?"<<endl;
+              
+              getline(cin, mainArc.incitingIncident);
+              
+              
+              cout<<"THE MIDDLE"<<endl;
+              cout<<"The fear-based decision your protagonist made after the inciting incident is something they're still paying for...until the game-changing midpoint. This usually leads to bad decisions on the protagonist's part, as they THINK they're doing the right thing, but are actually doing just the opposite (still trying to avoid the thing they're afraid of.)"<<endl;
+              
+              getline(cin, mainArc.middle);
+              
+              cout<<"THE DARK MOMENT"<<endl;
+              cout<<"Disaster strikes! But what does this disaster personally mean to the protagonist? How does it force them to realize that they're the one to blame for this crisis? How does it completely disarm them and make them face off with their fear and misbelief?"<<endl;
+              
+              getline(cin, mainArc.darkMoment);
+              
+              cout<<"THE 'AHA' MOMENT"<<endl;
+              cout<<"After your protagonist has been brought to their knees by the disaster, they have a revelation — an aha moment. They can suddenly see how their fear and misbelief has led them to make the wrong decisions about everything. So how is your protagonist going to overcome their fear and continue to the climax, therefore developing as a character? What lesson are they going to learn (and simultaneously teach the audience?)"<<endl;
+             
+              getline(cin, mainArc.ahaMoment);
+              
+              cout<<"THE ENDING"<<endl;
+              cout<<"Protagonist faces their most difficult challenge yet. It's a true test of their character — and how they respond to the situation is the proof that they've changed. At the end of the story, your reader should feel contented with the message of the book because the character HAS changed for the better, even if they weren't able to make things right in the end."<<endl;
+              
+              getline(cin, mainArc.ending);
+              
+              MainArcFile.open(project+": Character Arcs-"+dat+"-"+session+".txt", ios_base::app);
+              
+              MainArcFile<<endl<<"          -> "<<arcName.name<<"'s Character Development Arc <-"<<endl<<endl;
+              
+              MainArcFile<<"THE OPENING"<<endl;
+              MainArcFile<<"When a story first opens, nothing hooks the reader except for one thing: your protagonist's inner conflict. In a nutshell, that means: desire VS fear. How is the protagonist's fear standing in the way of getting what they think will make them truly happy?"<<endl<<endl<<mainArc.opening<<endl<<endl;
+              
+              MainArcFile<<"THE INCITING INCIDENT"<<endl;
+              MainArcFile<<"Why does this inciting incident matter to your protagonist? How does it push them outside their comfort zone? How are they going to respond to it, based on the fear that has raised them?"<<endl<<endl<<mainArc.incitingIncident<<endl<<endl;
+              
+              
+              MainArcFile<<"THE MIDDLE"<<endl;
+              MainArcFile<<"The fear-based decision your protagonist made after the inciting incident is something they're still paying for...until the game-changing midpoint. This usually leads to bad decisions on the protagonist's part, as they THINK they're doing the right thing, but are actually doing just the opposite (still trying to avoid the thing they're afraid of.)"<<endl<<endl<<mainArc.middle<<endl<<endl;
+              
+              MainArcFile<<"THE DARK MOMENT"<<endl;
+              MainArcFile<<"Disaster strikes! But what does this disaster personally mean to the protagonist? How does it force them to realize that they're the one to blame for this crisis? How does it completely disarm them and make them face off with their fear and misbelief?"<<endl<<endl<<mainArc.darkMoment<<endl<<endl;
+              
+              MainArcFile<<"THE 'AHA' MOMENT"<<endl;
+              MainArcFile<<"After your protagonist has been brought to their knees by the disaster, they have a revelation — an aha moment. They can suddenly see how their fear and misbelief has led them to make the wrong decisions about everything. So how is your protagonist going to overcome their fear and continue to the climax, therefore developing as a character? What lesson are they going to learn (and simultaneously teach the audience?)"<<endl<<endl<<mainArc.ahaMoment<<endl<<endl;
+              
+              MainArcFile<<"THE ENDING"<<endl;
+              MainArcFile<<"Protagonist faces their most difficult challenge yet. It's a true test of their character — and how they respond to the situation is the proof that they've changed. At the end of the story, your reader should feel contented with the message of the book because the character HAS changed for the better, even if they weren't able to make things right in the end."<<endl<<endl<<mainArc.ending<<endl<<endl;
+              
+              MainArcFile.close();
+              ClearScreen();
+              cout<<"Character Arc File successfully created! Create more character arcs or do something else!"<<endl;
+              goto firstpoint;
+              
+              
+              
+              
+              
+              
+          }
+          
+          else if ( quest == "3")
+          {
+              
+              ClearScreen();
+              
+              cout<<"              -Enneagram Types Sheet-   "<<endl<<endl;
+              
+              cout<<"1. THE REFORMER"<<endl;
+              cout<<"The Rational, Idealistic Type:"<<endl;
+              cout<<"Principled, Purposeful, Self-Controlled, and Perfectionistic"<<endl;
+              cout<<"Basic Fear: Of being corrupt/evil, defective"<<endl;
+              cout<<"Basic Desire: To be good, to have integrity, to be balanced"<<endl;
+              cout<<"Key Motivations: Want to be right, to strive higher and improve everything, to be"<<endl;
+              cout<<"consistent with their ideals, to justify themselves, to be beyond criticism so as not to be condemned by anyone."<<endl<<endl;
+              
+              cout<<"2. THE HELPER"<<endl;
+              cout<<"The Caring, Interpersonal Type:"<<endl;
+              cout<<"Generous, Demonstrative, People-Pleasing, and Possessive"<<endl;
+              cout<<"Basic Fear: Of being unwanted, unworthy of being loved"<<endl;
+              cout<<"Basic Desire: To feel loved"<<endl;
+              cout<<"Key Motivations: Want to be loved, to express their feelings for others, to be needed and"<<endl;
+              cout<<"appreciated, to get others to respond to them, to vindicate their claims about themselves."<<endl<<endl;
+              
+              cout<<"3. THE ACHIEVER"<<endl;
+              cout<<"The Success-Oriented, Pragmatic Type: "<<endl;
+              cout<<"Adaptable, Excelling, Driven, and Image-Conscious Basic Fear: Of being worthless"<<endl;
+              cout<<"Basic Desire: To feel valuable and worthwhile"<<endl;
+              cout<<"Key Motivations: Want to be affirmed, to distinguish themselves from others, to have attention, to be admired, and to impress others."<<endl<<endl;
+              
+              cout<<"4. THE INDIVIDUALIST"<<endl;
+              cout<<"The Sensitive, Introspective Type:"<<endl;
+              cout<<"Expressive, Dramatic, Self-Absorbed, and Temperamental"<<endl;
+              cout<<"Basic Fear: That they have no identity or personal significance"<<endl;
+              cout<<"Basic Desire: To find themselves and their significance (to create an identity)"<<endl;
+              cout<<"Key Motivations: Want to express themselves and their individuality, to create and"<<endl;
+              cout<<"surround themselves with beauty, to maintain certain moods and feelings, to withdraw to protect their self-image, to take care of emotional needs before attending to anything else, to attract a 'rescuer.'"<<endl<<endl;
+              
+              cout<<"5. THE INVESTIGATOR"<<endl;
+              cout<<"The Intense, Cerebral Type:"<<endl;
+              cout<<"Perceptive, Innovative, Secretive, and Isolated"<<endl;
+              cout<<"Basic Fear: Being useless, helpless, or incapable"<<endl;
+              cout<<"Basic Desire: To be capable and competent"<<endl;
+              cout<<"Key Motivations: Want to possess knowledge, to understand the environment, to have"<<endl;
+              cout<<"everything figured out as a way of defending the self from threats from the environment."<<endl<<endl;
+              
+              cout<<"6. THE LOYALIST"<<endl;
+              cout<<"The Committed, Security-Oriented Type:"<<endl;
+              cout<<"Engaging, Responsible, Anxious, and Suspicious"<<endl;
+              cout<<"Basic Fear: Of being without support and guidance"<<endl;
+              cout<<"Basic Desire: To have security and support"<<endl;
+              cout<<"Key Motivations: Want to have security, to feel supported by others, to have certitude and"<<endl;
+              cout<<"reassurance, to test the attitudes of others toward them, to fight against anxiety and insecurity."<<endl<<endl;
+              
+              cout<<"7. THE ENTHUSIAST"<<endl;
+              cout<<"The Busy, Variety-Seeking Type:"<<endl;
+              cout<<"Spontaneous, Versatile, Acquisitive, and Scattered"<<endl;
+              cout<<"Basic Fear: Of being deprived and in pain"<<endl;
+              cout<<"Basic Desire: To be satisfied and content—to have their needs fulfilled"<<endl;
+              cout<<"Key Motivations: Want to maintain their freedom and happiness, to avoid missing out on"<<endl;
+              cout<<"worthwhile experiences, to keep themselves excited and occupied, to avoid and discharge pain."<<endl<<endl;
+              
+              
+              cout<<"8. THE CHALLENGER"<<endl;
+              cout<<"The Powerful, Dominating Type:"<<endl;
+              cout<<"Self-Confident, Decisive, Willful, and Confrontational"<<endl;
+              cout<<"Basic Fear: Of being harmed or controlled by others"<<endl;
+              cout<<"Basic Desire: To protect themselves (to be in control of their own life and destiny)"<<endl;
+              cout<<"Key Motivations: Want to be self-reliant, to prove their strength and resist weakness, to be"<<endl;
+              cout<<"important in their world, to dominate the environment, and to stay in control of their situation."<<endl<<endl;
+              
+              cout<<"9. THE PEACEMAKER"<<endl;
+              cout<<"The Easygoing, Self-Effacing Type:"<<endl;
+              cout<<"Receptive, Reassuring Agreeable, and Complacent"<<endl;
+              cout<<"Basic Fear: Of loss and separation"<<endl;
+              cout<<"Basic Desire: To have inner stability 'peace of mind'"<<endl;
+              cout<<"Key Motivations: Want to create harmony in their environment, to avoid conflicts and"<<endl;
+              cout<<"tension, to preserve things as they are, to resist whatever would upset or disturb them."<<endl<<endl;
+              
+              EnneagramTyp.open("Enneagram Types.txt");
+              
+              EnneagramTyp<<"              -Enneagram Types Sheet-   "<<endl<<endl;
+              
+              EnneagramTyp<<"1. THE REFORMER"<<endl;
+              EnneagramTyp<<"The Rational, Idealistic Type:"<<endl;
+              EnneagramTyp<<"Principled, Purposeful, Self-Controlled, and Perfectionistic"<<endl;
+              EnneagramTyp<<"Basic Fear: Of being corrupt/evil, defective"<<endl;
+              EnneagramTyp<<"Basic Desire: To be good, to have integrity, to be balanced"<<endl;
+              EnneagramTyp<<"Key Motivations: Want to be right, to strive higher and improve everything, to be"<<endl;
+              EnneagramTyp<<"consistent with their ideals, to justify themselves, to be beyond criticism so as not to be condemned by anyone."<<endl<<endl;
+              
+              EnneagramTyp<<"2. THE HELPER"<<endl;
+              EnneagramTyp<<"The Caring, Interpersonal Type:"<<endl;
+              EnneagramTyp<<"Generous, Demonstrative, People-Pleasing, and Possessive"<<endl;
+              EnneagramTyp<<"Basic Fear: Of being unwanted, unworthy of being loved"<<endl;
+              EnneagramTyp<<"Basic Desire: To feel loved"<<endl;
+              EnneagramTyp<<"Key Motivations: Want to be loved, to express their feelings for others, to be needed and"<<endl;
+              EnneagramTyp<<"appreciated, to get others to respond to them, to vindicate their claims about themselves."<<endl<<endl;
+              
+              EnneagramTyp<<"3. THE ACHIEVER"<<endl;
+              EnneagramTyp<<"The Success-Oriented, Pragmatic Type: "<<endl;
+              EnneagramTyp<<"Adaptable, Excelling, Driven, and Image-Conscious Basic Fear: Of being worthless"<<endl;
+              EnneagramTyp<<"Basic Desire: To feel valuable and worthwhile"<<endl;
+              EnneagramTyp<<"Key Motivations: Want to be affirmed, to distinguish themselves from others, to have attention, to be admired, and to impress others."<<endl<<endl;
+              
+              EnneagramTyp<<"4. THE INDIVIDUALIST"<<endl;
+              EnneagramTyp<<"The Sensitive, Introspective Type:"<<endl;
+              EnneagramTyp<<"Expressive, Dramatic, Self-Absorbed, and Temperamental"<<endl;
+              EnneagramTyp<<"Basic Fear: That they have no identity or personal significance"<<endl;
+              EnneagramTyp<<"Basic Desire: To find themselves and their significance (to create an identity)"<<endl;
+              EnneagramTyp<<"Key Motivations: Want to express themselves and their individuality, to create and"<<endl;
+              EnneagramTyp<<"surround themselves with beauty, to maintain certain moods and feelings, to withdraw to protect their self-image, to take care of emotional needs before attending to anything else, to attract a 'rescuer.'"<<endl<<endl;
+              
+              EnneagramTyp<<"5. THE INVESTIGATOR"<<endl;
+              EnneagramTyp<<"The Intense, Cerebral Type:"<<endl;
+              EnneagramTyp<<"Perceptive, Innovative, Secretive, and Isolated"<<endl;
+              EnneagramTyp<<"Basic Fear: Being useless, helpless, or incapable"<<endl;
+              EnneagramTyp<<"Basic Desire: To be capable and competent"<<endl;
+              EnneagramTyp<<"Key Motivations: Want to possess knowledge, to understand the environment, to have"<<endl;
+              EnneagramTyp<<"everything figured out as a way of defending the self from threats from the environment."<<endl<<endl;
+              
+              EnneagramTyp<<"6. THE LOYALIST"<<endl;
+              EnneagramTyp<<"The Committed, Security-Oriented Type:"<<endl;
+              EnneagramTyp<<"Engaging, Responsible, Anxious, and Suspicious"<<endl;
+              EnneagramTyp<<"Basic Fear: Of being without support and guidance"<<endl;
+              EnneagramTyp<<"Basic Desire: To have security and support"<<endl;
+              EnneagramTyp<<"Key Motivations: Want to have security, to feel supported by others, to have certitude and"<<endl;
+              EnneagramTyp<<"reassurance, to test the attitudes of others toward them, to fight against anxiety and insecurity."<<endl<<endl;
+              
+              EnneagramTyp<<"7. THE ENTHUSIAST"<<endl;
+              EnneagramTyp<<"The Busy, Variety-Seeking Type:"<<endl;
+              EnneagramTyp<<"Spontaneous, Versatile, Acquisitive, and Scattered"<<endl;
+              EnneagramTyp<<"Basic Fear: Of being deprived and in pain"<<endl;
+              EnneagramTyp<<"Basic Desire: To be satisfied and content—to have their needs fulfilled"<<endl;
+              EnneagramTyp<<"Key Motivations: Want to maintain their freedom and happiness, to avoid missing out on"<<endl;
+              EnneagramTyp<<"worthwhile experiences, to keep themselves excited and occupied, to avoid and discharge pain."<<endl<<endl;
+              
+              
+              EnneagramTyp<<"8. THE CHALLENGER"<<endl;
+              EnneagramTyp<<"The Powerful, Dominating Type:"<<endl;
+              EnneagramTyp<<"Self-Confident, Decisive, Willful, and Confrontational"<<endl;
+              EnneagramTyp<<"Basic Fear: Of being harmed or controlled by others"<<endl;
+              EnneagramTyp<<"Basic Desire: To protect themselves (to be in control of their own life and destiny)"<<endl;
+              EnneagramTyp<<"Key Motivations: Want to be self-reliant, to prove their strength and resist weakness, to be"<<endl;
+              EnneagramTyp<<"important in their world, to dominate the environment, and to stay in control of their situation."<<endl<<endl;
+              
+              EnneagramTyp<<"9. THE PEACEMAKER"<<endl;
+              EnneagramTyp<<"The Easygoing, Self-Effacing Type:"<<endl;
+              EnneagramTyp<<"Receptive, Reassuring Agreeable, and Complacent"<<endl;
+              EnneagramTyp<<"Basic Fear: Of loss and separation"<<endl;
+              EnneagramTyp<<"Basic Desire: To have inner stability 'peace of mind'"<<endl;
+              EnneagramTyp<<"Key Motivations: Want to create harmony in their environment, to avoid conflicts and"<<endl;
+              EnneagramTyp<<"tension, to preserve things as they are, to resist whatever would upset or disturb them."<<endl<<endl;
+              
+              EnneagramTyp.close();
+              
+              cout<<"^^ ENNEAGRAM TYPES GENERATED ABOVE AND TO FILE ^^ "<<endl;
+              goto firstpoint;
+              
+          }
+          else if (quest == "4")
+          {
+              ClearScreen();
+              goto firstpoint;
+          }
+           else
+          {
+              ClearScreen();
+        cout<<"Does not compute!"<<endl;
+        goto firstpoint;
+          }
+          
+          
+      }
+    else if (quest == "2")
+    {
+        ClearScreen();
+        outlineStructure outliner;
+ 
+        
+        cout<<"                     3 ACT STORY STRUCTURE TEMPLATE"<<endl<<endl;
+        cout<<"                      ACT 1"<<endl<<endl;
+
+        cout<<"HOOK"<<endl;
+        cout<<"INTRODUCTION TO PROTAGONIST’S INNER CONFLICT"<<endl;
+        cout<<"The hook is internal conflict, which is simple: desire vs fear. Despite popular belief, the internal conflict starts long before the "<<endl;
+        cout<<"inciting incident shows up to destroy your protagonist’s life. In fact, that conflict has been boiling just below the surface this "<<endl;
+        cout<<"whole time — otherwise, your inciting incident wouldn’t matter. See, external conflict (the plot) is all about what happens; "<<endl;
+        cout<<"but internal conflict (the story) is about why it matters."<<endl;
+        cout<<"PROMPT:"<<endl;
+        cout<<"Ask yourself:"<<endl;
+        cout<<"- What does my protagonist think will bring them true happiness or contentment?"<<endl;
+        cout<<"And how is her fear stopping them from going after it?"<<endl;
+        cout<<"- What is my character’s misbelief and what happened in their past to create"<<endl;
+        cout<<"this misbelief?"<<endl;
+        cout<<"- How can I show my audience in the FIRST FIVE MINUTES why “what’s"<<endl;
+        cout<<"happening” MATTERS to my protagonist, given their desire, fear, and misbelief?"<<endl<<endl;
+        
+        cin.ignore();
+        getline(cin, outliner.hook);
+        
+        cout<<"INCITING INCIDENT"<<endl;
+        cout<<"PROTAGONIST IS PUSHED OUTSIDE COMFORT ZONE"<<endl;
+        cout<<"This is the event that really sets your story in motion. Your inciting incident doesn’t have to be some big, epic, crazy call-to-adventure."<<endl;
+        cout<<"It just has to be something that pushes your protagonist outside their comfort zone. A conflict surfaces — something the protagonist has to "<<endl;
+        cout<<"face head-on. It’s really as simple as that. Don’t overcomplicate it, as many writers do. If you know why the inciting incident matters to "<<endl;
+        cout<<"the protagonist and you let them react to it as a normal person would (running for cover because of their fear!) CONGRATULATIONS. You nailed it."<<endl;
+        cout<<"PROMPT:"<<endl;
+        cout<<"Ask yourself:"<<endl;
+        cout<<"- Why does this inciting incident matter to my protagonist? How does it push"<<endl;
+        cout<<"them outside their comfort zone?"<<endl;
+        cout<<"- What internal conflict is going to arise for my protagonist in wake of the"<<endl;
+        cout<<"inciting incident?"<<endl<<endl;
+        
+        getline(cin, outliner.iIncident);
+        
+        cout<<"BUILD-UP"<<endl;
+        cout<<"THE IMPOSSIBLE QUESTION"<<endl;
+        cout<<"Protagonist is going to have to face this thing head on. The reader can now see what the protagonist’s internal struggle really is,"<<endl;
+        cout<<"and how this whole situation is going to be especially tricky for them to navigate."<<endl;
+        cout<<"PROMPT:"<<endl;
+        cout<<"Ask yourself:"<<endl;
+        cout<<"- What is the “impossible choice”? Your protagonist must be faced with options:"<<endl;
+        cout<<"stay inside their comfort zone and risk NEVER getting What They Desire, or venture into the unknown and accomplish"<<endl; 
+        cout<<"their goal while STILL avoiding their fear."<<endl<<endl;
+        
+        getline(cin, outliner.buildUp);
+        
+        cout<<"FIRST PLOT POINT"<<endl;
+        cout<<"PROTAGONIST MAKES A DECISION WHICH DETERMINES WHAT HAPPENS NEXT"<<endl;
+        cout<<"Your protagonist is a conflicted person — torn between desire and fear. So when the inciting incident steps in and "<<endl;
+        cout<<"shoves them outside their comfort zone, their fear takes over and they respond based on their misbelief, which sets up more "<<endl;
+        cout<<"obstacles for the rest of the book. The human brain makes decisions by avoiding the most pain — so what is the LEAST painful option, "<<endl;
+        cout<<"in the long run? Venturing into the unknown and risking some danger... but ultimately getting what you have always desired."<<endl;
+        cout<<"PROMPT:"<<endl;
+        cout<<"Ask yourself:"<<endl;
+        cout<<"- How is my protagonist going to react to the inciting incident, given their fear and"<<endl;
+        cout<<"misbelief about the world? What decision are they going to make now to avoid the most pain? (And get what they want "<<endl;
+        cout<<"while steering clear of the thing they’re afraid of?)"<<endl<<endl;
+        
+        getline(cin, outliner.firstPlotPoint);
+        
+        cout<<"FIRST PINCH POINT"<<endl;
+        cout<<"OPPOSITION/ANTAGONISTIC FORCE LOOMS IN THE DISTANCE"<<endl;
+        cout<<"You can have a pinch point even if you don’t have a “villain” character in your story. It doesn’t have to "<<endl;
+        cout<<"be a villain — it doesn’t have to be a person. It just has to be something that is ultimately going to come back "<<endl;
+        cout<<"to haunt the protagonist later. (It can even be the protagonist’s misbelief.)"<<endl;
+        cout<<"PROMPT:"<<endl;
+        cout<<"Ask yourself:"<<endl;
+        cout<<"- What is the opposition/antagonistic force my protagonist is going to have to"<<endl;
+        cout<<"face head-on later? How can I show the reader that it’s already looming in the distance?"<<endl<<endl;
+        
+        getline(cin, outliner.firstPinchPoint);
+        
+        cout<<"                                ACT 2"<<endl<<endl;
+        cout<<"PRE-MIDPOINT REACTIONARY HERO, PROTAGONIST PURSUES THEIR FEAR-BASED GOAL"<<endl;
+        cout<<"Thanks to the decision your protagonist made at the end of act one, they are now a man (or a woman) with a plan. "<<endl;
+        cout<<"They have a goal now that they are actively pursuing. Essentially, they’re going after the thing they think will make them "<<endl;
+        cout<<"happy while still steering clear of the thing they’re afraid of. Whether they’re running away from something or running to something, "<<endl;
+        cout<<"their motivation is the same: avoid as much pain as possible, and get to the finish line where (their idea of) happiness awaits."<<endl;
+        cout<<"PROMPT:"<<endl;
+        cout<<"Ask yourself:"<<endl;
+        cout<<"- How is my protagonist going to execute their plan (achieve goal, avoid fear)?"<<endl;
+        cout<<"- What is their step-by-step plan for making this happen? (Even if they don’t know"<<endl;
+        cout<<"every step themselves)."<<endl;
+        cout<<"- How can I show my reader the REASONING behind my protagonist’s actions (aka:"<<endl;
+        cout<<"how their every decision is fundamentally based on their misbelief)?"<<endl<<endl;
+        
+        getline(cin, outliner.preMidPoint);
+        
+        cout<<"GAME-CHANGING MIDPOINT PLOT TWIST!"<<endl;
+        cout<<"A game-changing midpoint doesn’t have to be some epic and crazy twist of fate. In fact, the only thing a game-changing "<<endl;
+        cout<<"midpoint has to do is surprise the protagonist and shift their goal. (Bonus points if you can surprise the reader at the same time!) "<<endl;
+        cout<<"It can be as dramatic as “everything protagonist believes is actually a lie” OR as simple as “protagonist realizes they are falling in love"<<endl; 
+        cout<<"with their nemesis."<<endl;
+        cout<<"PROMPT:"<<endl;
+        cout<<"Ask yourself:"<<endl;
+        cout<<"- What unexpected thing is going to upend my protagonist’s plan (and entire life)?"<<endl;
+        cout<<"- Why does it matter to my protagonist, given their desire and fear? "<<endl;
+        cout<<"- How is it going to change the game for my protagonist?"<<endl<<endl;
+        
+        getline(cin, outliner.midPoint);
+        
+        cout<<"POST-MIDPOINT ACTION HERO"<<endl;
+        cout<<"PROTAGONIST APPROACHES THEIR GOAL FROM A DIFFERENT ANGLE"<<endl;
+        cout<<"Figure out how your protagonist is going to handle the plot twist. It’s sort of like another "<<endl;
+        cout<<"inciting incident, shoving them further outside their comfort zone and presenting a new and unexpected challenge."<<endl;
+        cout<<"Give your protagonist a plan going forward – and a sense of where this is going. Your readers want to know what "<<endl;
+        cout<<"happens next because they can foresee what MIGHT happen."<<endl;
+        cout<<"PROMPT:"<<endl;
+        cout<<"Ask yourself:"<<endl;
+        cout<<"- What is my protagonist’s NEW plan going to be, based on the game-changing"<<endl;
+        cout<<"midpoint and what it means to them?"<<endl;
+        cout<<"- How does my protagonist think their new plan is going to actually work and bring"<<endl;
+        cout<<"them to their goal while STILL avoiding their fear?"<<endl<<endl;
+        
+        getline(cin, outliner.postMidPoint);
+        
+        cout<<"SECOND PINCH POINT OPPOSITION/ANTAGONISTIC FORCE GETS CLOSER"<<endl;
+        cout<<"Remember, your “opposition” doesn’t have to be an actual villain or even a person — it can be the protagonist’s"<<endl;
+        cout<<"misbelief always looming in the background, getting ready to attack them come act 3. Whatever the major “opposition”"<<endl;
+        cout<<"your protagonist is going to face off with at the climax of your story, that’s what you want to give the reader a taste "<<endl;
+        cout<<"of at this story beat."<<endl;
+        cout<<"PROMPT:"<<endl;
+        cout<<"Ask yourself:"<<endl;
+        cout<<"- How can I show the opposition/antagonistic force now getting closer to"<<endl;
+        cout<<"disrupting the protagonist’s life?"<<endl<<endl;
+        
+        getline(cin, outliner.secondPinchPoint);
+        
+        cout<<"                                           ACT 3"<<endl<<endl;
+        cout<<"SUPPOSED VICTORY"<<endl;
+        cout<<"PROTAGONIST THINKS THEY HAVE OVERCOME"<<endl;
+        cout<<"Making progress with their new-and-improved plan, the protagonist feels confident they will be victorious."<<endl;
+        cout<<"Or perhaps they have already overcome the smallest of the challenges and feel pretty good about their plan. "<<endl;
+        cout<<"Little do they know, disaster is on the way. (NOTE: this plot point is optional, but awesome.)"<<endl;
+        cout<<"PROMPT:"<<endl;
+        cout<<"Ask yourself:"<<endl;
+        cout<<"- Why does my protagonist think they will be victorious?"<<endl;
+        cout<<"- What’s happening to make them feel SO CLOSE to achieving their goal and"<<endl;
+        cout<<"finding happiness at last?"<<endl<<endl;
+        
+        getline(cin, outliner.supposedVictory);
+        
+        cout<<"DISASTER, EVERYTHING GOES WRONG"<<endl;
+        cout<<"Bring your protagonist to their knees by rooting the disaster in their greatest fear and misbelief."<<endl;
+        cout<<"It might be something that’s terrible for anyone to experience, but go beyond that and make it something "<<endl;
+        cout<<"especially bad for your protagonist because of their fear and misbelief. Every decision they have made"<<endl;
+        cout<<"throughout the story has led them to this moment...which means they are to blame for their own ruin."<<endl;
+        cout<<"PROMPT:"<<endl;
+        cout<<"Ask yourself:"<<endl;
+        cout<<"- What does this disaster specifically mean to my protagonist?"<<endl;
+        cout<<"- How does it force them to realize that they’re the one to blame for this crisis?"<<endl;
+        cout<<"- How does it completely disarm them and make them face off with their fear and"<<endl;
+        cout<<"misbelief?"<<endl<<endl;
+        
+        getline(cin, outliner.disaster);
+        
+        cout<<"DARK MOMENT PROTAGONIST, IS HOPELESS"<<endl;
+        cout<<"It’s always darkest before the dawn. Your protagonist needs a rock-bottom moment in order to have"<<endl;
+        cout<<"an “aha” moment — and that’s what makes the revelation so satisfying. But right now, in wake of the disaster, "<<endl;
+        cout<<"your protagonist is feeling utterly and completely broken, confused, lost, and disappointed."<<endl;
+        cout<<"PROMPT:"<<endl;
+        cout<<"Ask yourself:"<<endl;
+        cout<<"- How is my protagonist forced into the ring with their kryptonite?"<<endl<<endl;
+        
+        getline(cin, outliner.darkestMoment);
+        
+        cout<<"AHA MOMENT, RENEWED HOPE"<<endl;
+        cout<<"This is the biggest pivotal moment in your whole story. After your protagonist has been brought to their knees "<<endl;
+        cout<<"by the disaster, they have a revelation — an aha moment. They can suddenly see how their fear and misbelief has "<<endl;
+        cout<<"led them to make the wrong decisions about everything. They realize how wrong they were — but most importantly, they "<<endl;
+        cout<<"see that they’ll have to overcome their fear/misbelief and make the RIGHT decision in order to achieve their goal: true happiness."<<endl;
+        cout<<"PROMPT:"<<endl;
+        cout<<"Ask yourself:"<<endl;
+        cout<<"- How is my protagonist going to overcome their fear and continue to the climax,"<<endl;
+        cout<<"therefore developing as a character?"<<endl;
+        cout<<"- What lesson are they going to learn (and simultaneously teach the audience?)"<<endl<<endl;
+        
+        getline(cin, outliner.realizationMoment);
+        
+        cout<<"CLIMACTIC CONFRONTATION, PROTAGONIST FACES THEIR BIGGEST CHALLENGE YET"<<endl;
+        cout<<"This is the moment everyone has been waiting for, where the protagonist is going to face their most difficult "<<endl;
+        cout<<"challenge yet. It’s a true test of their character — and how they respond to the confrontation is the proof that they’ve TRANSFORMED..."<<endl;
+        cout<<"as a result of their journey. So your protagonist has already won the internal battle (in their “aha” moment) but now it’s time for them "<<endl;
+        cout<<"to win the external battle (which of course will force them to face off with their greatest fears.)"<<endl;
+        cout<<"PROMPT: Ask yourself:"<<endl;
+        cout<<"- How does my protagonist prove their transformation by crushing their misbelief and facing their greatest fear with courage?"<<endl<<endl;
+        
+        getline(cin, outliner.climaxConfront);
+        
+        cout<<"VICTORY, PROTAGONIST OVERCOMES"<<endl;
+        cout<<"This doesn’t necessarily mean the protagonist wins the external battle or that things turn out exactly how they hoped. "<<endl;
+        cout<<"But the protagonist does experience a personal victory — because they overcame their fear and destroyed their misbelief. "<<endl;
+        cout<<"Here’s my rule of thumb: if your reader doesn’t know how the character has transformed as a result of their journey, you need "<<endl;
+        cout<<"to rewrite your book until they do."<<endl;
+        cout<<"PROMPT:"<<endl;
+        cout<<"Ask yourself:"<<endl;
+        cout<<"- How has my protagonist changed as a result of their journey?"<<endl<<endl;
+        
+        getline(cin, outliner.victory);
+        
+        cout<<"RESOLUTION, WRAPPING UP LOOSE ENDS"<<endl;
+        cout<<"This is the part where all the loose ends are tied up. The reader should be left with no missing information or silent questions. "<<endl;
+        cout<<"If the book is part of a series, then you may want to end on a cliffhanger by swapping out the “victory” story beat with another “plot twist.”"<<endl;
+        cout<<"If the book is a standalone, make sure the reader’s questions are answered when they reach the final page."<<endl;
+        cout<<"PROMPT:"<<endl;
+        cout<<"Ask yourself:"<<endl;
+        cout<<"- Where will my protagonist go from here?"<<endl;
+        cout<<"- What does their life look like, now that they have overcome their misbelief?"<<endl<<endl;
+        
+        getline(cin, outliner.resolution);
+        
+        OutlineFile.open(project+": Outline-"+dat+"-"+session+".txt");
+        
+        OutlineFile<<"                     3 ACT STORY STRUCTURE TEMPLATE"<<endl<<endl;
+        OutlineFile<<"                      ACT 1"<<endl<<endl;
+
+        OutlineFile<<"HOOK"<<endl<<endl;
+        
+        OutlineFile<<outliner.hook<<endl<<endl;
+        
+        OutlineFile<<"INCITING INCIDENT"<<endl<<endl;
+        
+        OutlineFile<<outliner.iIncident<<endl<<endl;
+        
+        OutlineFile<<"BUILD-UP"<<endl<<endl;
+        
+        OutlineFile<<outliner.buildUp<<endl<<endl;
+        
+        OutlineFile<<"FIRST PLOT POINT"<<endl<<endl;
+        
+        OutlineFile<<outliner.firstPlotPoint<<endl<<endl;
+        
+        OutlineFile<<"FIRST PINCH POINT"<<endl;
+        OutlineFile<<"OPPOSITION/ANTAGONISTIC FORCE LOOMS IN THE DISTANCE"<<endl<<endl;
+        
+        OutlineFile<<outliner.firstPinchPoint<<endl<<endl;
+        
+        OutlineFile<<"                                ACT 2"<<endl<<endl;
+        OutlineFile<<"PRE-MIDPOINT REACTIONARY HERO, PROTAGONIST PURSUES THEIR FEAR-BASED GOAL"<<endl<<endl;
+        
+        OutlineFile<<outliner.preMidPoint<<endl<<endl;
+        
+        OutlineFile<<"GAME-CHANGING MIDPOINT PLOT TWIST!"<<endl<<endl;
+        
+        OutlineFile<<outliner.midPoint<<endl<<endl;
+        
+        OutlineFile<<"POST-MIDPOINT ACTION HERO"<<endl<<endl;
+        
+        OutlineFile<<outliner.postMidPoint<<endl<<endl;
+        
+        OutlineFile<<"SECOND PINCH POINT OPPOSITION/ANTAGONISTIC FORCE GETS CLOSER"<<endl<<endl;
+        
+        OutlineFile<<outliner.secondPinchPoint<<endl<<endl;
+        
+        OutlineFile<<"                                           ACT 3"<<endl<<endl;
+        OutlineFile<<"SUPPOSED VICTORY"<<endl<<endl;
+        
+        OutlineFile<<outliner.supposedVictory<<endl<<endl;
+        
+        OutlineFile<<"DISASTER, EVERYTHING GOES WRONG"<<endl<<endl;
+        
+        OutlineFile<<outliner.disaster<<endl<<endl;
+        
+        OutlineFile<<"DARK MOMENT PROTAGONIST, IS HOPELESS"<<endl<<endl;
+        
+        OutlineFile<<outliner.darkestMoment<<endl<<endl;
+        
+        OutlineFile<<"AHA MOMENT, RENEWED HOPE"<<endl<<endl;
+        
+        OutlineFile<<outliner.realizationMoment<<endl<<endl;
+        
+        OutlineFile<<"CLIMACTIC CONFRONTATION, PROTAGONIST FACES THEIR BIGGEST CHALLENGE YET"<<endl<<endl;
+        
+        OutlineFile<<outliner.climaxConfront<<endl<<endl;
+        
+        OutlineFile<<"VICTORY, PROTAGONIST OVERCOMES"<<endl<<endl;
+        
+        OutlineFile<<outliner.victory<<endl<<endl;
+        
+        OutlineFile<<"RESOLUTION, WRAPPING UP LOOSE ENDS"<<endl<<endl;
+        
+        OutlineFile<<outliner.resolution<<endl<<endl;
+        
+        OutlineFile.close();
+        ClearScreen();
+        cout<<"Outline File successfully created!"<<endl;
+        goto firstpoint;
+        
+        
+        
+        
+        
+    }
+    else if ( quest == "3")
+    {
+        ClearScreen();
+        DraftFile.open(project+": Draft-"+dat+"-"+session+".txt", ios_base::app);
+        cout<<"Start writing your draft!"<<endl;
+        cin.ignore();
+        while (draftholder != "BREAK")
+        {
+           
+           getline(cin, draftholder);
+           DraftFile<<draftholder<<endl<<endl;
+           cout<<endl<<"(Write BREAK to finish writing for now or keep writing!)"<<endl<<endl;
+            
+        }
+        
+        DraftFile.close();
+        ClearScreen();
+        cout<<"Draft progress saved to file, resume at any time!"<<endl;
+        draftholder = "0";
+        goto firstpoint;
+    }
+    else if (quest == "4")
+    {
+        ClearScreen();
+        readpoint:
+    cout<<"------------------["<<dat<<"]-----[Session: "<<session<<"]----------"<<endl;
+    cout<<"        -Which file would you like to view?-    "<<endl<<endl;
+    cout<<"         1. Characters File     "<<endl;
+    cout<<"         2. Character Arcs File           "<<endl;
+    cout<<"         3. Story Outline File              "<<endl;
+    cout<<"         4. Draft File              "<<endl;
+    cout<<"         5. Return to Menu             "<<endl<<endl;
+    cout<<"--------------------~~["<<project<<"]~~----------------------"<<endl;
+        
+        cin>>quest;
+        ClearScreen();
+        if (quest == "1")
+        {
+            
+            ifstream MainCharFile (project+": Characters-"+dat+"-"+session+".txt");
+            if (MainCharFile.is_open())
+            {
+            while ( getline (MainCharFile,line) )
+            {
+            cout << line << '\n';
+            }
+            }
+         MainCharFile.close();
+         cout<<"CHARACTER FILE PRINTED ABOVE"<<endl;
+        }
+        else if (quest == "2")
+        {
+            ifstream MainArcFile (project+": Character Arcs-"+dat+"-"+session+".txt");
+            if (MainArcFile.is_open())
+            {
+            while ( getline (MainArcFile,line) )
+            {
+            cout << line << '\n';
+            }
+            }
+            MainArcFile.close();
+            cout<<"CHARACTER ARC FILE PRINTED ABOVE"<<endl;
+            
+        }
+        else if (quest == "3")
+        {
+            ifstream OutlineFile (project+": Outline-"+dat+"-"+session+".txt");
+            if (OutlineFile.is_open())
+            {
+            while ( getline (OutlineFile,line) )
+            {
+            cout << line << '\n';
+            }
+            }
+            OutlineFile.close();
+            cout<<"OUTLINE FILE PRINTED ABOVE"<<endl;
+            
+        }
+        else if (quest == "4")
+        {
+            ifstream DraftFile (project+": Draft-"+dat+"-"+session+".txt");
+            if (DraftFile.is_open())
+            {
+            while ( getline (DraftFile,line) )
+            {
+            cout << line << '\n';
+            }
+            }
+            DraftFile.close();
+            cout<<"DRAFT FILE PRINTED ABOVE"<<endl;
+            
+            
+        }
+        else if(quest == "5")
+        {
+            ClearScreen();
+            goto firstpoint;
+        }
+         else
+        {
+        ClearScreen();
+        cout<<"Does not compute!"<<endl;
+        goto readpoint;
+        }
+        
+        goto readpoint;
+    }
+    
+    else if (quest == "0")
+    {
+        ClearScreen();
+        cout<<"(I got you fam)"<<endl<<endl;
+        goto debug;
+    }
+    else if (quest == "5")
+    {
+        return 0;
+    }
+    else
+    {
+        ClearScreen();
+        cout<<"Does not compute!"<<endl;
+        goto firstpoint;
+    }
+        
+    
+    
+    
+    return 0;
+}
